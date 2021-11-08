@@ -15,7 +15,7 @@ class Site_model extends CI_Model
 
     function run_my_query()
     {
-        return "run_my_query의 값";
+        return "Site_model.run_my_query의 값";
     }
 
     // 데이터 추가

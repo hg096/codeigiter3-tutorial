@@ -18,6 +18,7 @@ class Action extends CI_Controller
 
     public function update_data()
     {
+
         if ($this->action_model->update_table_data()) {
             echo "<h3> 업데이트 완료!! </h3>";
         }

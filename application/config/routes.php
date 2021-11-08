@@ -63,17 +63,21 @@ $route["site/contact"] = "site/contact_info";
 $route["site/product/(:any)"] = "site/product/$1";
 $route["site/service/(:num)/(:any)"] = "site/service/$1/$2";
 
-// 페이지 예 2
+// 페이지 예 2 
 // http://localhost/ci3/index.php/site/variable
 $route["site/variable"] = "site/pass_var";
 
 
 // $route["추가 할 url 컨트롤러 이름이랑 무관"] = "컨트롤러/함수"
+
+// 데이터 추가
 // http://localhost/ci3/index.php/site/insert-data
 $route["site/insert-data"] = "site/insert_data_into_table";
 
+// 데이터 조회
 // http://localhost/ci3/index.php/action/select-all
 $route["action/select-all"] = "action/get_all_data";
 
+// 데이터 업데이트
 // http://localhost/ci3/index.php/action/update-data
 $route["action/update-data"] = "action/update_data";
