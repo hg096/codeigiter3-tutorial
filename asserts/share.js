@@ -1,25 +1,25 @@
 
-{/* 카카오톡 공유를 사용하려면 head부분에 필요 */}
-{/* <script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script> */}
+{/* 카카오톡 공유를 사용하려면 head부분에 필요 */ }
+{/* <script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script> */ }
 
 // 카카오톡 커스텀 공유
 function shareKakaoCustom(thisUrl) {
-        // var thisUrl = document.URL;
+    // var thisUrl = document.URL;
 
-        Kakao.init("키넣는곳"); // 여기에 자바스크립트 키 넣기
-        Kakao.Link.sendCustom({
-            templateId: [templete_id] // 템플릿을 만들었다면 여기에 키 넣기
-        });
+    Kakao.init("키넣는곳"); // 여기에 자바스크립트 키 넣기
+    Kakao.Link.sendCustom({
+        templateId: [templete_id] // 템플릿을 만들었다면 여기에 키 넣기
+    });
 }
 
 // 카카오톡 기본 공유 
 try {
-    function shareKakaoDefault(thisUrl,titles,account,images) {
+    function shareKakaoDefault(thisUrl, titles, account, images) {
 
         // 현재 url 받아오기
         //var thisUrl = document.URL;
 
-        Kakao.init('키넣는곳') // 여기에 자바스크립트 키 넣기
+        Kakao.init('ad6ac0e76ed142bb729974663576065f') // 여기에 자바스크립트 키 넣기
         Kakao.Link.sendDefault({
             objectType: 'feed',
             content: {
@@ -45,13 +45,13 @@ try {
                     webUrl: thisUrl,
                 },
             },
-            // {
-            //     title: '앱으로 보기',
-            //     link: {
-            //         mobileWebUrl: thisUrl,
-            //         webUrl: thisUrl,
-            //     },
-            // },
+                // {
+                //     title: '앱으로 보기',
+                //     link: {
+                //         mobileWebUrl: thisUrl,
+                //         webUrl: thisUrl,
+                //     },
+                // },
             ],
         })
     };
@@ -61,13 +61,13 @@ try {
 }
 
 // 페이스북 공유
-function shareFacebook(thisUrl,main,titles) {
+function shareFacebook(thisUrl, main, titles) {
     // var thisUrl = document.URL;
     let url = encodeURIComponent(thisUrl);
     let title = titles;
     window.open(`http://www.facebook.com/sharer.php?u=${url}&t=${title}`, main, 'width=400, height=400');
 }
-    
+
 // 중요!!
 // 지원되는 웹: 사파리
 // 지원되는 모바일: 크롬, 오페라, 사파리, 삼성인터넷
@@ -88,8 +88,8 @@ function webShare(thisUrl, titles, texts) {
             text: shareText,
             url: thisUrl,
         })
-            // .then(() => console.log('Successful share'));
-            // .catch((error) => console.log('Error sharing', error));
+        // .then(() => console.log('Successful share'));
+        // .catch((error) => console.log('Error sharing', error));
     } else {
         alert("공유를 지원하지 않는 환경입니다.");
     }
