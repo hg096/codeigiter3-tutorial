@@ -80,20 +80,4 @@ class Site extends CI_Controller
     {
         echo "<h1> 서비스 페이지 </h1>" . $id . ' 그리고 ' . $name;
     }
-
-    // 데이터 추가
-    function insert_data_into_table()
-    {
-        $tbl = 'users';
-
-        // 더미 데이터 테이블 컬럼과 맞추기
-        $data = array(
-            "u_name" => "이름이름",
-            "u_email" => "이메일@메일.com",
-            "u_phone_num" => "123123",
-        );
-
-        // $this->모델파일이름->함수이름(매개변수);
-        echo $this->site_model->insert_table_data($tbl, $data);
-    }
 }

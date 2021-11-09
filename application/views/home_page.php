@@ -1,31 +1,25 @@
-<!--  -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <!--  -->
-    <?php $this->load->view("include/header_other")  ?>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Web Share</title>
 
 </head>
 
 <body>
 
-    <!--  -->
-    <?php $this->load->view("site/home_content")  ?>
-    <!--  -->
+
+    <input type="button" onClick="webShare(,,,);" value="btnShare" />
+    <input type="button" onClick="shareKakaoCustom();" value="Custom" />
+    <input type="button" onClick="shareKakaoDefault(,,,);" value="Default" />
+    <input type="button" onClick="shareFacebook(,,,);" value="facebook" />
 
 
-    <!--  -->
-    <?php $this->load->view("include/footer_other", array(
-        "name" => $name,
-        "email_footer" => $email,
+    <script>
 
-    ))  ?>
-    <!--  -->
-
+    </script>
 
 </body>
 
-
 </html>
-<!--  -->
