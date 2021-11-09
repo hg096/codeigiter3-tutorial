@@ -37,7 +37,9 @@ class Action extends CI_Controller
 
     public function codition()
     {
-        $data = $this->action_model->get_where_condition_query();
+        // $data = $this->action_model->get_where_condition_query();
+        // $data = $this->action_model->get_and_condition();
+        $data = $this->action_model->get_where_in();
         echo "<pre>";
         print_r($data);
     }

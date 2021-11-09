@@ -155,4 +155,32 @@ class Action_model extends CI_Model
         $query = $this->db->get();
         return $result = $query->result();
     }
+
+    public function get_and_condition()
+    {
+
+        $total = [
+
+            "tbl" => "users",
+
+        ];
+
+        $this->db->select("*");
+        $this->db->from($total["tbl"]);
+        $this->db->where([
+            "u_id" => 2,
+            "u_email" => "이메일@메일.com",
+        ]);
+        $query = $this->db->get();
+        return $result = $query->result();
+    }
+
+    public function get_where_in() {
+        $this->db->select("*");
+        $this->db->from("users");
+        $this->db->where_in("u_salary", [3000,3500,4000]);
+        $query = $this->db->get();
+
+        return $result = $query->result();
+    }
 }
