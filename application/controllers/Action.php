@@ -23,6 +23,7 @@ class Action extends CI_Controller
         print_r($data);
     }
 
+    // 업데이트
     public function update_data()
     {
         if ($this->action_model->update_table_data()) {
@@ -30,16 +31,26 @@ class Action extends CI_Controller
         }
     }
 
+    // 삭제
     public function delete_single_user()
     {
         echo $this->action_model->delete_specific_user();
     }
 
+    // where 절 상세
     public function codition()
     {
         // $data = $this->action_model->get_where_condition_query();
         // $data = $this->action_model->get_and_condition();
         $data = $this->action_model->get_where_in();
+        echo "<pre>";
+        print_r($data);
+    }
+
+    // join
+    public function get_messages()
+    {
+        $data = $this->action_model->get_user_message();
         echo "<pre>";
         print_r($data);
     }

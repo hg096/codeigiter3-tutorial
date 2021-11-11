@@ -175,12 +175,24 @@ class Action_model extends CI_Model
         return $result = $query->result();
     }
 
-    public function get_where_in() {
+    public function get_where_in()
+    {
         $this->db->select("*");
         $this->db->from("users");
-        $this->db->where_in("u_salary", [3000,3500,4000]);
+        $this->db->where_in("u_salary", [3000, 3500, 4000]);
+        // 검색 컬럼과 조건이 들어감
+        $this->db->like("u_email", ".com");
         $query = $this->db->get();
+        return $result = $query->result();
+    }
 
+    public function get_user_message()
+    {
+        // join tbl_users => id, match user_id inside tbl_messages
+        $this->db->select("*");
+        $this->db->from("users");
+        $this->db->join("messages as m_message", "user.u_id = message.u_user_id");
+        $query = $this->db->get();
         return $result = $query->result();
     }
 }
