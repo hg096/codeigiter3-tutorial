@@ -1,7 +1,6 @@
 
-/* 카카오톡 공유를 사용하려면 head부분에 필요 */
-
-/* <script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script> */ 
+{/* 카카오톡 공유를 사용하려면 head부분에 필요 */ }
+{/* <script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script> */ }
 
 // 카카오톡 커스텀 공유
 function shareKakaoCustom(thisUrl) {

@@ -18,24 +18,12 @@
 </body>
 
 <script>
-var url_ = "http://localhost/ci3/";
-var title_ = "제목제목";
-var account_ = "설명설명";
-var text_ = "문자문자";
-var img_ = "https://cdn.pixabay.com/photo/2021/10/25/14/45/apples-6741164_960_720.jpg";
+    var url_ = "http://localhost/ci3/";
+    var title_ = "제목제목";
+    var account_ = "설명설명";
+    var text_ = "문자문자";
+    var img_ = "https://cdn.pixabay.com/photo/2021/10/25/14/45/apples-6741164_960_720.jpg";
 </script>
-<script>
-$(document).ready(function() {
 
-    $('body').on('click', '#LoginBtn', function(e) {
-        login();
-    });
-
-    $('body').on('click', '#LoginBtn', function(e) {
-        login();
-    });
-
-});
-</script>
 
 </html>
