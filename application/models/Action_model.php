@@ -175,10 +175,11 @@ class Action_model extends CI_Model
         return $result = $query->result();
     }
 
-    public function get_where_in() {
+    public function get_where_in()
+    {
         $this->db->select("*");
         $this->db->from("users");
-        $this->db->where_in("u_salary", [3000,3500,4000]);
+        $this->db->where_in("u_salary", [3000, 3500, 4000]);
         $query = $this->db->get();
 
         return $result = $query->result();
