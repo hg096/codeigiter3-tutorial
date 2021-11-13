@@ -9,7 +9,6 @@ class Action_model extends CI_Model
     public function __construct()
     {
         parent::__construct();
-        $this->load->model("action_model");
     }
 
     // 데이터 추가
@@ -182,6 +181,15 @@ class Action_model extends CI_Model
         $this->db->where_in("u_salary", [3000, 3500, 4000]);
         $query = $this->db->get();
 
+        return $result = $query->result();
+    }
+
+    public function get_user_message()
+    {
+        $this->db->select("user.*, message.message");
+        $this->db->from("user");
+        $this->db->join("messages", "user.id = message.user_id", "left"); // left, right, inner 
+        $query = $this->db->get();
         return $result = $query->result();
     }
 }

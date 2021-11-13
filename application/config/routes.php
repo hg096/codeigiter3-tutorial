@@ -91,3 +91,12 @@ $route["action/delete-single"] = "action/delete_single_user";
 // 데이터 조회 조건
 // http://localhost/ci3/index.php/action/codition
 $route["action/codition"] = "action/codition";
+
+// 조인
+// http://localhost/ci3/index.php/action/messages
+$route["action/messages"] = "action/get_messages";
+
+// http://localhost/ci3/index.php/helpers/form
+$route["helpers/form"] = "user/form_helper_study";
+// http://localhost/ci3/index.php/helpers/form-submit
+$route["helpers/form-submit"] = "user/form_submit_method";

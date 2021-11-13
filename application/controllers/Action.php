@@ -5,7 +5,7 @@ class Action extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model("action_model");
+        $this->load->model("action_model"); // 컨트롤러에서 사용할 모델을 불러옴
     }
 
     // 데이터 추가
