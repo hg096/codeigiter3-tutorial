@@ -64,7 +64,7 @@ $route["site/product/(:any)"] = "site/product/$1";
 $route["site/service/(:num)/(:any)"] = "site/service/$1/$2";
 
 // 페이지 예 2 
-// http://localhost/ci3/index.php/site/variable
+// http://localhost/ci3/site/variable
 $route["site/variable"] = "site/pass_var";
 
 
@@ -73,30 +73,30 @@ $route["site/variable"] = "site/pass_var";
 
 
 // 데이터 추가
-// http://localhost/ci3/index.php/action/insert-data
+// http://localhost/ci3/action/insert-data
 $route["action/insert-data"] = "action/insert_data_into_table";
 
 // 데이터 조회
-// http://localhost/ci3/index.php/action/select-all
+// http://localhost/ci3/action/select-all
 $route["action/select-all"] = "action/get_all_data";
 
 // 데이터 업데이트
-// http://localhost/ci3/index.php/action/update-data
+// http://localhost/ci3/action/update-data
 $route["action/update-data"] = "action/update_data";
 
 // 데이터 삭제
-// http://localhost/ci3/index.php/action/delete-single
+// http://localhost/ci3/action/delete-single
 $route["action/delete-single"] = "action/delete_single_user";
 
 // 데이터 조회 조건
-// http://localhost/ci3/index.php/action/codition
+// http://localhost/ci3/action/codition
 $route["action/codition"] = "action/codition";
 
 // 조인
-// http://localhost/ci3/index.php/action/messages
+// http://localhost/ci3/action/messages
 $route["action/messages"] = "action/get_messages";
 
-// http://localhost/ci3/index.php/helpers/form
+// http://localhost/ci3/helpers/form
 $route["helpers/form"] = "user/form_helper_study";
-// http://localhost/ci3/index.php/helpers/form-submit
+// http://localhost/ci3/helpers/form-submit
 $route["helpers/form-submit"] = "user/form_submit_method";
